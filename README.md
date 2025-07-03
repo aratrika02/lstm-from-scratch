@@ -14,5 +14,5 @@ The model parameters (number of LSTM units=32,64,128, learning rate, step decay 
 obtain the optimal hyperparameters for the best model performance. Root Mean Square Error (RMSE) has been 
 used as the primary evaluation metric.
 
-Finally, an LSTM model with 32 units, leveraging SGD with momentum emerges as the model with 
-the best performance, achieving a denormalized test RMSE of 1.5384. 
+Finally, an LSTM model with 32 units, leveraging SGD with momentum and applying a decayed learning rate (initial learning rate = 1e-2 and is halved after every 
+10 epochs) emerges as the model with the best performance, achieving a denormalized test RMSE of 1.5384. 
