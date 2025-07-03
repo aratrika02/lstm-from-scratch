@@ -1,4 +1,4 @@
-# lstm-from-scratch
+# LSTM-from-scratch
 This project has been developed with the goal of achieving an in-depth understanding of how Long 
 Short-Term Memory (LSTM) networks work and to that end, implements it entirely from scratch without 
 using any built-in LSTM libraries. Only basic matrix operations and activation functions have been used in 
