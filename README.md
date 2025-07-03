@@ -1,8 +1,18 @@
 # lstm-from-scratch
-This project delves into understanding the Long Short-Term Memory Network in depth and 
-focuses on its manual implementation without using any deep learning library or pre-built LSTM modules. 
-Only basic matrix operations and activation functions have been used in the manual implementation of first, 
-a single LSTM cell  to process each time step individually, which then has been extended to process a full 
-sequence. The model built has been trained on a time-series data to predict vehicle coordinates over future 
-timesteps and root mean square error (RMSE) has been used as the primary evaluation metric in this 
-exercise.
+This project has been developed with the goal of achieving an in-depth understanding of how Long 
+Short-Term Memory (LSTM) networks work and to that end, implements it entirely from scratch without 
+using any built-in LSTM libraries. Only basic matrix operations and activation functions have been used in 
+constructing each component of an LSTM network, from gating mechanisms, cell state updates to 
+backpropagation through time (BPTT). 
+
+The performance of the model thus built is comprehensively evaluated 
+over a vehicle trajectory prediction task over a time-series dataset consisting of 9400 .csv files, each comprising 
+12 vehicular features over 67 timesteps. The task is to predict the vehicle coordinates for the next 5 timesteps by 
+training the model over the first 62 timesteps. The model performance has been assessed over a series of 
+experimentations: first using regular stochastic gradient descent (SGD) and then using SGD with momentum. 
+The model parameters (number of LSTM units=32,64,128, learning rate, step decay of learning rate) has been varied to 
+obtain the optimal hyperparameters for the best model performance. Root Mean Square Error (RMSE) has been 
+used as the primary evaluation metric.
+
+Finally, an LSTM model with 32 units, leveraging SGD with momentum emerges as the model with 
+the best performance, achieving a denormalized test RMSE of 1.5384. 
